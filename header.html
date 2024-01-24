@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/TakeOff_logo.png" alt="" class="" />
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="jobs.html">Our Packages</a></li>
+                <li><a href="services.html">Gallery</a></li>
+                <li><a href="contact.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <button class="nav-button">Call Us Now <i class="fa-solid fa-phone-volume"
+                        style="margin-left: 5px;"></i></button>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar ended-->
+
+
+
+
+    <style>
+        /* navbar */
+        .nav {
+            width: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1;
+            height: 100px;
+        }
+
+        .nav-logo {
+            max-width: 100%;
+            height: 100px;
+        }
+
+        .logo {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: start;
+        }
+
+        .nav-content img {
+            width: 90%;
+            height: 100px;
+            margin-left: 30px;
+        }
+
+        .nav-content {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            align-items: start;
+            z-index: 1;
+            height: 130px;
+
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0px;
+            display: flex;
+            margin-left: 15rem;
+            padding-top: 15px;
+        }
+
+        .nav-links li {
+            margin-right: 25px;
+            padding-left: 25px;
+
+        }
+
+        .nav-links a {
+            color: rgb(19, 149, 149);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 1.4rem;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            padding-top: 10px;
+            /* Add a smooth transition effect */
+        }
+
+        .nav-links a:hover {
+            color: rgb(23, 33, 37);
+            /* Change the color on hover */
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: 20px;
+            ;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: rgb(19, 149, 149);
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        .nav-button {
+            position: relative;
+            overflow: hidden;
+            padding: .5rem 1rem;
+            border-radius: 1.5rem;
+            background: rgb(19, 149, 149);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            margin-left: 20px;
+            margin-top: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-content {
+
+                padding-right: 10px;
+                /* Add some padding to separate logo from hamburger */
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                margin: 0;
+                z-index: 99999;
+                background-color: rgb(148, 172, 172);
+            }
+
+            .nav-links.show {
+                display: flex;
+                width: 100%;
+                padding-bottom: 10px;
+            }
+
+            .nav-links li {
+                text-align: center;
+                margin: 10px 0;
+                width: 100%;
+            }
+
+            .hamburger {
+                display: flex;
+                margin-top: 40px;
+                margin-left: 10rem;
+            }
+        }
+
+
+        /* navbar ends */
+    </style>
+</body>
+
+</html>
