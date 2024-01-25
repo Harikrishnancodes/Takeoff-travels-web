@@ -346,7 +346,7 @@ span.cardhead {
   width: 80%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .tours-cards-div {
     flex-direction: column;
   }
@@ -545,40 +545,6 @@ span.cardhead {
   transition: all 0.475s;
 }
 
-@media (max-width: 768px) {
-  .offers-div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    text-align: justify;
-  }
-  .offers-img {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10px;
-  }
-  .offers-img img {
-     width: 90%;
-     height: auto;
-  }
-  .offer-content p {
-    padding-top: 20px;
-    font-size: .7rem;
-   
-  }
-  .offer-content h6 {
-    font-size: 1.5rem;
-    color: black;
-    padding-bottom: 10px;
-  }
-  .button-whatsapp {
-    margin-top: 0;
-  }
-  
-}
 
 /* offers and packages section ends */
 

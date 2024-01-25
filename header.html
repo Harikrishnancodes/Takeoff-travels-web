@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6c53136549.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -180,6 +184,43 @@
                 margin-left: 10rem;
             }
         }
+        @media screen and (max-width: 1024px) {
+    .nav-content {
+        padding-right: 10px; /* Add some padding to separate logo from hamburger */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        margin: 0;
+        z-index: 99999;
+        background-color: rgb(148, 172, 172);
+        align-items: flex-end; /* Align links to the right */
+    }
+
+    .nav-links.show {
+        display: flex;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-top: 40px;
+        margin-left: auto; /* Set margin-left to auto to move to the right */
+    }
+}
+
 
 
         /* navbar ends */
