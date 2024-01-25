@@ -1265,6 +1265,38 @@ textarea {
   }
   
 }
+/* Existing styles */
+
+/* Responsive styles for tablets (minimum width 768px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact-form-overlay {
+    width: 90%; /* Adjust width for tablets */
+  }
+
+  form {
+    padding: 15px; 
+    width: 100%;
+    max-width: 500px; /* Adjust max-width for tablets */
+  }
+
+  input,
+  select,
+  textarea {
+    margin-bottom: 20px; 
+     /* Adjust margin for tablets */
+  }
+
+  .input-group input { /* Full width for tablets */
+    margin-right: 0; /* No margin between inputs for tablets */
+  }
+
+  .contact-form-overlay img {
+    width: 100%;
+    display: block;
+    border-radius: 0; 
+    height: auto; /* Set height to auto for responsive image height */
+  }
+}
 
 /* map section */
 .contact-map-main-div{
@@ -1335,6 +1367,11 @@ margin-bottom: 50px;
     }
     .map-section{
       width: 100%;
+    }
+    .address-container {
+    
+      margin-left: 0;
+     
     }
     
 }
