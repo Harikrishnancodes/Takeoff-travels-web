@@ -3,8 +3,29 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  
+  margin-left: auto;
+  margin-right: auto;
 
 }
+
+@media screen and (min-width: 1801px) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .base-layout{
+    width: auto;
+    max-width: 3120px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+}
+ 
 
 /* home section */
 
@@ -14,9 +35,13 @@ body {
   overflow: hidden;
   margin-top: 100px;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .background-image {
+  width: 100%;
+  max-width: 100%;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -54,6 +79,7 @@ body {
 /* home-about-section */
 .home-about-section-div {
   width: 100%;
+ 
   display: flex;
   position: relative;
   justify-content: center;
@@ -63,7 +89,7 @@ body {
 }
 
 .home-about-section {
-  max-width: 1440px;
+  max-width: 1800px;
   width: 80%;
   display: flex;
 }
@@ -177,6 +203,7 @@ span.takeoff {
     align-items: center;
     justify-content: center;
     padding-top: 10px;
+    
   }
 
   .about-intro {
@@ -200,13 +227,18 @@ span.takeoff {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 50px;
+
 }
 
 .popular-tours-div {
-
+  max-width: 1800px;
   width: 80%;
   display: flex;
+  justify-content: left;
+  align-items: left
+  ;
 }
 
 .popheading {
@@ -230,171 +262,149 @@ span.tours {
   color: rgb(19, 149, 149);
 }
 
+/* Global Styles */
+/* Global Styles */
+/* Global Styles */
 .tours-cards-main-div {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  max-width: 1800px;
+
 }
 
-.tours-cards-div {
+.tours-cards-main-div_container {
   width: 80%;
-  height: auto;
-  display: flex;
+  max-width: 1800px;
+
+
 }
 
-.tourcards-left {
-  position: relative;
-  width: 45%;
-  align-items: flex-start;
+.row {
+  display: flex;
+  max-width: 1800px;
+ 
+}
+
+.home_tourcards_leftCol,
+.home_tourcards_rightCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tourcard {
   position: relative;
+  overflow: hidden;
 }
 
-.tourcard img {
-  width: 100%;
-  border-radius: 20px;
-  margin-bottom: 30px;
-  transition: transform 0.5s ease;
-}
-
-span.cardhead {
-  font-size: 2rem;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.tourcard p {
+.text-overlay {
   position: absolute;
-  bottom: 10%;
-  left: 45%;
-  padding-top: 20px;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
+  text-align: left;
   color: #fff;
-  font-size: 17px;
-  text-align: justify;
-  width: 80%;
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-.tourcards-right {
-  width: 50%;
-  align-items: flex-end;
-  margin-left: 4%;
-  position: relative;
-}
-
-.tourcards-right .tourcard-2 {
-  position: relative;
-}
-
-.tourcards-right img {
-  width: 100%;
-  height: 104vh;
-  border-radius: 20px;
-  transition: transform 0.5s ease;
-}
-
-.tourcards-right .tourcard-2 p {
-  position: absolute;
-  bottom: 2%;
-  left: 45%;
-  transform: translateX(-50%);
-  color: #fff;
-  font-size: 17px;
-  text-align: justify;
-  width: 80%;
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-.tourcards-left2 {
-  width: 50%;
-  align-items: flex-start;
-  position: relative;
-}
-
-.tourcards-left2 img {
-  width: 100%;
-  height: 104vh;
-  border-radius: 20px;
-}
-
-.tourcards-right2 {
-  position: relative;
-  width: 45%;
-  align-items: flex-end;
-  margin-left: 4%;
-}
-
-.tourcards-left2 .tourcard-2 {
-  position: relative;
-}
-
-.tourcards-left2 .tourcard-2 p {
-  position: absolute;
-  bottom: 2%;
-  left: 45%;
-  transform: translateX(-50%);
-  color: #fff;
-  font-size: 17px;
-  text-align: justify;
+  padding: 20px;
+  border-radius: 10px;
   width: 80%;
 }
 
-@media only screen and (max-width: 1024px) {
-  .tours-cards-div {
-    flex-direction: column;
+.text-overlay h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.text-overlay p {
+  margin: 0;
+}
+
+.home_tourcards_leftCol img,
+.home_tourcards_rightCol img {
+  width: 100%;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 767.98px) {
+  .text-overlay h3 {
+    font-size: 1em;
+    margin-bottom: 5px;
   }
 
-  .tourcards-left,
-  .tourcards-right,
-  .tourcards-left2,
-  .tourcards-right2 {
-    width: 100%;
+  .text-overlay p {
+    font-size: 0.8em;
   }
 
-  .tourcards-right img {
-    width: 100%;
-    height: 50vh;
+  
+  
+}
 
-
+/* Responsive styles for tablet devices */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .text-overlay h3 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
   }
 
-  .tourcards-right {
-    margin-left: 0;
-  }
-
-  .tourcards-left2 img {
-    width: 100%;
-    height: 50vh;
-    margin-bottom: 20px;
-  }
-
-  .tourcards-right2 {
-    margin-left: 0;
+  .text-overlay p {
+    font-size: 1em;
   }
 }
+
+/* Styles for screens larger than 1775px */
+@media (min-width: 1776px) {
+  .tourcard,
+  .text-overlay {
+    height: auto;
+  }
+}
+
+
 
 /* //tour count section  */
+
+.tours-count-main-div{
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 .tour-count {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 80%;
+  max-width: 1800px;
   background-image: url("../img/London-United-Kingdom.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-position: center center;
   border-radius: 60px;
-  height: 50vh;
+  height: auto;
   padding: 20px;
   box-sizing: border-box;
+  scale: 100%;
+}
+
+.tour-count::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  border-radius: 60px;
 }
 
 .tour-completed-list {
+  position: relative;
+  z-index: 2; /* Set a higher z-index */
   text-align: center;
 }
 
@@ -458,7 +468,7 @@ span.cardhead {
 }
 
 .offers-div {
-  max-width: 1440px;
+  max-width: 1800px;
   width: 80%;
   display: flex;
 }
@@ -482,7 +492,7 @@ span.cardhead {
 
 .offers-img img {
   width: 90%;
-  height: 80vh;
+  height: auto;
   border-radius: 20px;
 }
 
@@ -587,6 +597,8 @@ span.cardhead {
 .about_sec1 {
   background-image: url(../img/takeOffAboutHero.png);
   width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: auto;
   margin-top: 100px;
 }
@@ -594,10 +606,12 @@ span.cardhead {
 .about_sec1_row {
   width: 100%;
   height: auto;
+  
 }
 
 .about_sec1_text_container {
-  text-align: center;
+  margin-left: 10%;
+  text-align: left;
   color: #fff;
   padding-top: 14%;
   padding-bottom: 14%;
@@ -607,12 +621,21 @@ span.cardhead {
 
 .about_sec1_text_container h2 {
   font-weight: bolder;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style:Bold;
+  font-size: 3.4rem;
 }
 
 .about_sec1_text_container h3 {
-  padding-left: 10%;
-  padding-right: 10%;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+
+  margin-top: 8px;
+  line-height: 2;
+
 }
 
 .about_sec2 {
@@ -666,6 +689,21 @@ span.cardhead {
 }
 
 @media screen and (max-width:768px) {
+
+  .about_sec1_text_container h2{
+    font-size: 2.5rem;
+  }
+  .about_sec1_text_container {
+   width: 100%;
+   margin-left: 2%;
+  
+   
+  }
+  .about_sec2_text_container h6 {
+    
+    padding-left: 2%;
+    line-height: 2rem;
+  }
   .about_sec3_row1_img_container img {
     padding-left: 5%;
     padding-right: 5%;

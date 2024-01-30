@@ -53,16 +53,50 @@ function populateGalleryPage(data) {
             const country = Object.keys(data)[i];
             const galleryItem = data[country];
 
+            const imgContainer = document.createElement('div');
+            imgContainer.classList.add('gallery-item');
+
             const img = document.createElement('img');
             img.src = galleryItem.img_url;
             img.alt = galleryItem.img_place;
             img.classList.add('img-fluid', 'mb-3'); // Add margin-bottom to create space between images
-            col.appendChild(img);
+
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+
+            // Create a span for rating and a star icon
+            const ratingSpan = document.createElement('span');
+            ratingSpan.classList.add('overlay-text', 'rating');
+            ratingSpan.innerHTML = `${galleryItem.img_rating} <i class="bi bi-star-fill"></i>`;
+
+            // Create spans for country and place names
+            const countrySpan = document.createElement('span');
+            countrySpan.classList.add('overlay-text', 'country-place'); // Add the 'country-place' class
+            countrySpan.textContent = galleryItem.img_country;
+
+            const placeSpan = document.createElement('span');
+            placeSpan.classList.add('overlay-text', 'country-place'); // Add the 'country-place' class
+            placeSpan.textContent = galleryItem.img_place;
+
+
+
+            // Append spans to overlay
+            overlay.appendChild(ratingSpan);
+            overlay.appendChild(placeSpan);
+            overlay.appendChild(document.createElement('br')); // Add a line break
+            overlay.appendChild(countrySpan);
+
+
+            imgContainer.appendChild(img);
+            imgContainer.appendChild(overlay);
+            col.appendChild(imgContainer);
         }
 
         galleryContainer.appendChild(col);
     }
 }
+
+
 
 // Call displayGalleryPage to populate the gallery on page load
 displayGalleryPage();
