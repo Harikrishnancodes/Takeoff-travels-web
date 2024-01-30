@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Document</title>
     <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <script src="https://kit.fontawesome.com/6c53136549.js" crossorigin="anonymous"></script>
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6c53136549.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -22,23 +22,28 @@
                     <img src="img/TakeOff_logo.png" alt="" class="" />
                 </a>
             </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="packages.html">Our Packages</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <button class="nav-button"><span class="nav-button-content">
+                    
+                    Call Us Now <i class="fa-solid fa-phone-volume"
+                        style="margin-left: 5px;"></i></span></button>
+            </div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="packages.html">Our Packages</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Blog</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <button class="nav-button">Call Us Now <i class="fa-solid fa-phone-volume"
-                        style="margin-left: 5px;"></i></button>
-            </ul>
         </div>
     </nav>
+
     <!-- navbar ended-->
 
 
@@ -48,51 +53,50 @@
         /* navbar */
         .nav {
             width: 100%;
-    max-width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 1;
-    height: auto;
-        }
-
-        .nav-logo {
+            height: 100px;
             max-width: 100%;
-            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1;
+            height: auto;
         }
 
-        .logo {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: start;
-        }
-
+       
         .nav-content img {
-            width: 90%;
-            height: 100px;
-            margin-left: 30px;
-        }
+    max-width: 100%; /* Make the image responsive */
+    height: 100px; /* Maintain aspect ratio */
+    margin-left: 30px;
+}
 
         .nav-content {
             width: 100%;
-    position: absolute;
-    display: flex;
-    align-items: center; /* Align items vertically in the middle */
-    justify-content: space-between; /* Add space between logo and nav links */
-    z-index: 1;
-    padding: 10px
-
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            /* Align items on the ends */
+            align-items: center;
+            z-index: 1;
+            padding: 10px;
         }
 
         .nav-links {
-            list-style: none;
+
             padding: 0px;
             display: flex;
-    
-            padding-top: 15px;
+            align-items: center;
+            /* Align items vertically in the center */
+        }
+
+        .nav-links ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+
         }
 
         .nav-links li {
@@ -111,12 +115,10 @@
             font-weight: 500;
             font-style: normal;
             padding-top: 10px;
-            /* Add a smooth transition effect */
         }
 
         .nav-links a:hover {
             color: rgb(23, 33, 37);
-            /* Change the color on hover */
         }
 
         .hamburger {
@@ -124,7 +126,6 @@
             flex-direction: column;
             cursor: pointer;
             margin-right: 20px;
-            ;
         }
 
         .bar {
@@ -145,38 +146,74 @@
             border: none;
             cursor: pointer;
             font-size: 1.3rem;
-            margin-left: 20px;
             margin-top: 0;
+        }
+        
+.nav-button:hover::before {
+  transform: scaleX(1);
+}
+
+.nav-button-content {
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+}
+
+.nav-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: black;
+  transition: all 0.475s;
+}
+
+
+
+        @media screen and (min-width: 1025px) and (max-width: 1255px) {
+            .nav-links a {
+                font-size: 1.2rem;
+                /* Adjust the font size within this range */
+            }
+            .nav-button {
+            position: relative;
+            overflow: hidden;
+            padding: 5px;
+            border-radius: 1.5rem;
+            background: rgb(19, 149, 149);
+           
+            font-size: 1.2rem;
+         
+        }
+        .nav-links li {
+            margin-right: 15px;
+            padding-left: 15px;
+
+        }
+
         }
 
         @media screen and (max-width: 1025px) {
-            .nav-content {
-
-                padding-right: 10px;
-                /* Add some padding to separate logo from hamburger */
-            }
-
-            .nav-links {
+            .nav-links ul {
                 display: none;
                 flex-direction: column;
+                align-items: center;
                 width: 100%;
+                background-color: rgb(253, 252, 252);
                 position: absolute;
                 top: 100px;
                 left: 0;
                 margin: 0;
                 z-index: 99999;
-                background-color: rgb(148, 172, 172);
             }
-            .nav-content img {
-            width: 70%;
-            height: 80px;
-            margin-left: 10px;
-        }
 
-            .nav-links.show {
+            .nav-links.show ul {
                 display: flex;
-                width: 100%;
-                padding-bottom: 10px;
             }
 
             .nav-links li {
@@ -187,15 +224,42 @@
 
             .hamburger {
                 display: flex;
-                 margin-left: 10rem;
+                margin-right: 10px;
+            }
+
+            .nav-button {
+                display: none;
             }
         }
-     
 
 
 
         /* navbar ends */
     </style>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector(".nav-links");
+            navLinks.classList.toggle("show");
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const homeSections = document.querySelectorAll('.home-section');
+
+            homeSections.forEach((homeSection) => {
+                const images = homeSection.querySelectorAll('.background-image');
+                let currentImageIndex = 0;
+
+                setInterval(() => {
+                    images[currentImageIndex].classList.remove('active');
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    images[currentImageIndex].classList.add('active');
+                }, 5000);
+            });
+        });
+
+    </script>
 </body>
 
 </html>

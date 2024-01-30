@@ -43,7 +43,7 @@ body {
   width: 100%;
   max-width: 100%;
   width: 100%;
-  height: 100vh;
+  height: auto;
   position: relative;
   top: 0;
   left: 0;
@@ -217,6 +217,7 @@ span.takeoff {
 
   .home-about-img img {
     width: 100%;
+    margin-top: 1rem;
   }
 }
 
@@ -334,6 +335,12 @@ span.tours {
     font-size: 1em;
     margin-bottom: 5px;
   }
+  .tours-cards-main-div {
+    
+    margin-top: 20px;
+   
+  
+  }
 
   .text-overlay p {
     font-size: 0.8em;
@@ -380,7 +387,7 @@ span.tours {
   align-items: center;
   width: 80%;
   max-width: 1800px;
-  background-image: url("../img/London-United-Kingdom.jpg");
+  background-image: url("../img/bridge2.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
@@ -388,7 +395,6 @@ span.tours {
   height: auto;
   padding: 20px;
   box-sizing: border-box;
-  scale: 100%;
 }
 
 .tour-count::before {
@@ -436,6 +442,7 @@ span.tours {
   .tour-count {
     flex-direction: column;
     height: auto;
+    background-image: url("../img/london3.jpg");
   }
 
   .tour-completed-list img {
@@ -844,6 +851,10 @@ span.tours {
   border: 2px solid #139595;
   border-radius: 2rem;
   text-align: center;
+}
+.about_sec4_box_row_col img {
+  width: 6rem;
+  height: 6rem;
 }
 
 .about_sec4_box h2 {
