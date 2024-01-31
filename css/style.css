@@ -139,13 +139,14 @@ span.takeoff {
 }
 
 .home-about-img {
+  margin-left: 5%;
   width: 50%;
   display: flex;
   justify-content: end;
 }
 
 .home-about-img img {
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 
@@ -200,6 +201,7 @@ span.takeoff {
 
   .home-about-img {
     width: 100%;
+    margin-left: 0;
     align-items: center;
     justify-content: center;
     padding-top: 10px;
@@ -218,6 +220,9 @@ span.takeoff {
   .home-about-img img {
     width: 100%;
     margin-top: 1rem;
+  }
+  .about-p{
+    font-size: 1rem;
   }
 }
 
@@ -332,7 +337,7 @@ span.tours {
 /* Responsive styles for smaller screens */
 @media (max-width: 767.98px) {
   .text-overlay h3 {
-    font-size: 1em;
+    font-size: 1.5rem;
     margin-bottom: 5px;
   }
   .tours-cards-main-div {
@@ -343,7 +348,7 @@ span.tours {
   }
 
   .text-overlay p {
-    font-size: 0.8em;
+    font-size: 1rem;
   }
 
   
@@ -387,7 +392,7 @@ span.tours {
   align-items: center;
   width: 80%;
   max-width: 1800px;
-  background-image: url("../img/bridge2.jpg");
+  background-image: url("../img/bridge2.webp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
@@ -442,7 +447,8 @@ span.tours {
   .tour-count {
     flex-direction: column;
     height: auto;
-    background-image: url("../img/london3.jpg");
+    background-image: url("../img/london3.webp");
+    background-size: 100% ;
   }
 
   .tour-completed-list img {
@@ -465,101 +471,6 @@ span.tours {
 
 
 /* offers and packages section starts */
-.offers-main-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
-.offers-div {
-  max-width: 1800px;
-  width: 80%;
-  display: flex;
-}
-
-.offer-content {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-
-  align-items: center;
-
-}
-
-.offers-img {
-  width: 50%;
-  display: flex;
-  justify-content: end;
-  align-items: flex-end;
-}
-
-.offers-img img {
-  width: 90%;
-  height: auto;
-  border-radius: 20px;
-}
-
-.offer-content h6 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 3rem;
-  color: black;
-  padding-bottom: 30px;
-}
-
-.offer-content p {
-  padding-top: 50px;
-  padding-bottom: 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.7rem;
-  color: black;
-}
-
-.button-whatsapp {
-  margin-top: 50px;
-  position: relative;
-  overflow: hidden;
-  width: 200px;
-  height: 4rem;
-  padding: 0 1rem;
-  border-radius: 2rem;
-  background: #42db87;
-  background-size: 400%;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.button-whatsapp:hover::before {
-  transform: scaleX(1);
-}
-
-.button-content-whatsapp {
-  position: relative;
-  z-index: 1;
-  font-size: 1.5rem;
-}
-
-.button-whatsapp::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  width: 100%;
-  height: inherit;
-  border-radius: inherit;
-  background: black;
-  transition: all 0.475s;
-}
 
 
 /* offers and packages section ends */
@@ -602,7 +513,7 @@ span.tours {
 /* ABOUT PAGE START*/
 
 .about_sec1 {
-  background-image: url(../img/takeOffAboutHero.png);
+  background-image: url(../img/takeOffAboutHero.webp);
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -697,12 +608,23 @@ span.tours {
 
 @media screen and (max-width:768px) {
 
+  .about_sec1 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  
+  .about_sec1_row {
+ width: 80%;
+    
+  }
   .about_sec1_text_container h2{
     font-size: 2.5rem;
   }
   .about_sec1_text_container {
    width: 100%;
-   margin-left: 2%;
+   margin-left: 0;
+   text-align: center;
   
    
   }
@@ -1222,17 +1144,19 @@ color: black;
   align-items: center;
   margin-top: 50px;
   margin-bottom: 50px;
+
 }
 
 .contact-form-overlay {
   position: relative;
   width: 80%;
+ 
 }
 
 .contact-form-overlay img {
   width: 100%;
   display: block;
-  border-radius: 8px; /* Add border-radius to the image */
+  border-radius: 1.5rem;
 }
 
 form {
@@ -1285,7 +1209,8 @@ textarea {
 /* Responsive styles for tablets and mini-laptops */
 @media only screen and (max-width: 768px) {
   .contact-form-overlay {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 90%; 
+    height: 420px;/* Adjust width for smaller screens */
   }
 
   form {
@@ -1307,8 +1232,8 @@ textarea {
   .contact-form-overlay img {
     width: 100%;
     display: block;
-    border-radius: 0; 
-    height :600px;
+    border-radius: 1rem; 
+    height: 100%;
     /* Add border-radius to the image */
   }
   
@@ -1526,13 +1451,26 @@ margin-bottom: 50px;
 
 
 .package_sec1 {
-  background-image: url(../img/package-header.jpg);
+  background-image: url(../img/package-header.webp);
   background-size: cover;
   width: 100%;/* Set an appropriate height for your container */
   margin-top: 100px;
 }
+ 
 
+@media only screen and (max-width: 768px) {
 
+  .package_sec1 {
+    display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+  .contact_sec1{
+    display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+}
 
 
 

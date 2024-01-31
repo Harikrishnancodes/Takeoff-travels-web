@@ -177,6 +177,10 @@
     .tour-details {
         padding-left: 20px; /* Adjust as needed */
     }
+    .tour-details p{
+        margin-bottom: 25px;
+
+    }
 
     .book-now-btn {
         right: 10px;
@@ -225,7 +229,7 @@
         <div class="tour-package-main">
             <div class="tour-package">
                 <div class="tour-img">
-                    <img src="img/Lakshadweep.png" alt="Tour Package 1">
+                    <img src="img/Lakshadweep.webp" alt="Tour Package 1">
                 </div>
                 <div class="tour-details">
                     <h3>Lakshadweep</h3>
@@ -238,7 +242,7 @@
                         area of 32 sq. kms. </p>
                     <div class="rating">4.5 <i class="fa-regular fa-star"></i></div>
                     <button class="more-details-btn" onclick="toggleDetails('details1')">More Details</button>
-                    <button class="book-now-btn">Book Now</button>
+                     <button class="book-now-btn" onclick="redirectToContact()">Book Now</button>
                 </div>
             </div>
             <div id="details1" class="additional-details" style="display: none;">
@@ -319,7 +323,7 @@
         <div class="tour-package-main">
             <div class="tour-package">
                 <div class="tour-img">
-                    <img src="img/Bali.png" alt="Tour Package 2">
+                    <img src="img/Bali.webp" alt="Tour Package 2">
                 </div>
                 <div class="tour-details">
                     <h3>Bali</h3>
@@ -332,7 +336,7 @@
                         discover.</p>
                     <div class="rating">4.6 <i class="fa-regular fa-star"></i></div>
                     <button class="more-details-btn" onclick="toggleDetails('details2')">More Details</button>
-                    <button class="book-now-btn">Book Now</button>
+                     <button class="book-now-btn" onclick="redirectToContact()">Book Now</button>
                 </div>
             </div>
             <div id="details2" class="additional-details" style="display: none;">
@@ -388,7 +392,7 @@
         <div class="tour-package-main">
             <div class="tour-package">
                 <div class="tour-img">
-                    <img src="img/Armenia.png" alt="Tour Package 3">
+                    <img src="img/Armenia.webp" alt="Tour Package 3">
                 </div>
                 <div class="tour-details">
                     <h3>Armenia</h3>
@@ -401,7 +405,7 @@
                         biblical times.</p>
                     <div class="rating">4.7 <i class="fa-regular fa-star"></i></div>
                     <button class="more-details-btn" onclick="toggleDetails('details3')">More Details</button>
-                    <button class="book-now-btn">Book Now</button>
+                     <button class="book-now-btn" onclick="redirectToContact()">Book Now</button>
                 </div>
             </div>
             <div id="details3" class="additional-details" style="display: none;">
@@ -422,7 +426,7 @@
         <div class="tour-package-main">
             <div class="tour-package">
                 <div class="tour-img">
-                    <img src="img/malasia2.png" alt="Tour Package 2">
+                    <img src="img/malasia2.webp" alt="Tour Package 2">
                 </div>
                 <div class="tour-details">
                     <h3>malaysia</h3>
@@ -435,7 +439,7 @@
                         packages for visitors to explore.</p>
                     <div class="rating">4.8 <i class="fa-regular fa-star"></i></div>
                     <button class="more-details-btn" onclick="toggleDetails('details4')">More Details</button>
-                    <button class="book-now-btn">Book Now</button>
+                    <button class="book-now-btn" onclick="redirectToContact()">Book Now</button>
                 </div>
             </div>
             <div id="details4" class="additional-details" style="display: none;">
@@ -518,7 +522,7 @@
 
 
     <div class="floating_btn">
-        <a target="_blank" href="https://wa.me/+917907977521" style="text-decoration: none;">
+        <a target="_blank" href="https://wa.me/ +918089812666" style="text-decoration: none;">
             <div class="contact_icon">
                 <i class="fa fa-whatsapp my-float"></i>
             </div>
@@ -557,7 +561,12 @@
     </script>
     <!--header and footer script end-->
 
-
+    <script>
+        function redirectToContact() {
+            // Use window.location.href to redirect to the contact.html page
+            window.location.href = 'contact.html#contact-form';
+        }
+    </script>
     <script>
         function toggleDetails(detailsId) {
             var details = document.getElementById(detailsId);

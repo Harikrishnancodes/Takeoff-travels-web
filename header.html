@@ -19,7 +19,7 @@
         <div class="nav-content">
             <div class="logo">
                 <a href="index.html">
-                    <img src="img/TakeOff_logo.png" alt="" class="" />
+                    <img src="img/TakeOff_logo.webp" alt="" class="" />
                 </a>
             </div>
             <div class="nav-links">
@@ -204,7 +204,7 @@
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
-                background-color: rgb(253, 252, 252);
+                background-color: rgba(235, 235, 235, 0.952);
                 position: absolute;
                 top: 100px;
                 left: 0;
@@ -215,6 +215,11 @@
             .nav-links.show ul {
                 display: flex;
             }
+            .nav-content img {
+    max-width: 100%; /* Make the image responsive */
+    height: 100px; /* Maintain aspect ratio */
+    margin-left: 0;
+}
 
             .nav-links li {
                 text-align: center;
