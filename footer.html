@@ -25,21 +25,22 @@
     <!-- offers and packages section starts -->
     <div class="offers-main-div">
         <div class="offers-div">
-            <div class="offer-content">
+            <div class="offer-content animate fadeLeft">
                 <h6>Grab Amazing Offers and <br>
                     <span class="takeoff">Exclusive Packages</span>
                 </h6>
                 <p>Embark on a journey with Takeoff Travel Agency, where every moment is crafted to perfection, and your
                     adventure awaits.</p>
-                    <a target="_blank" href="https://wa.me/+918089812666" style="text-decoration: none;">
-                <button class="button-whatsapp">
-                    <span class="button-content-whatsapp"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
-                        Let's
-                        Chat</span>
-                </button> </a>
+                <a target="_blank" href="https://wa.me/+918089812666" style="text-decoration: none;">
+                    <button class="button-whatsapp">
+                        <span class="button-content-whatsapp"><i class="fa-brands fa-whatsapp"
+                                style="color: #ffffff;"></i>
+                            Let's
+                            Chat</span>
+                    </button> </a>
 
             </div>
-            <div class="offers-img">
+            <div class="offers-img animate fadeRight">
                 <img src="img/footerpic.webp" alt="">
             </div>
         </div>
@@ -50,16 +51,16 @@
 
     <div class="gradient_div_blue_white">
 
-        <div class="gradient_div_blue_white_img_holder">
+        <div class="gradient_div_blue_white_img_holder animate fadeInUp">
             <img src="img/gradient float image 1.webp" alt="">
         </div>
-        <div class="gradient_div_blue_white_img_holder">
+        <div class="gradient_div_blue_white_img_holder animate fadeInDown">
             <img src="img/gradient float image 2.png" alt="">
         </div>
-        <div class="gradient_div_blue_white_img_holder">
+        <div class="gradient_div_blue_white_img_holder animate fadeInUp">
             <img src="img/gradient float image 3.webp" alt="">
         </div>
-        <div class="gradient_div_blue_white_img_holder">
+        <div class="gradient_div_blue_white_img_holder animate fadeInDown">
             <img src="img/gradient float image 4.webp" alt="">
         </div>
 
@@ -73,28 +74,28 @@
             </div>
             <div class="footer_cta_centered">
                 <div class="footer_cta_buttons row">
-                    <div class="contact_items col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="contact_items col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
                         <img src="img/locationIcon.png" alt="">
                         <div class="contact_items_text">
                             <h2>Location</h2>
                             <h3>Address here</h3>
                         </div>
                     </div>
-                    <div class="contact_items col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="contact_items col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
                         <img src="img/emailIcon.webp" alt="">
                         <div class="contact_items_text">
                             <h2>Email</h2>
                             <h3>support@gamil.com</h3>
                         </div>
                     </div>
-                    <div class="contact_items col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="contact_items col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
                         <img src="img/phoneIcon.png" alt="">
                         <div class="contact_items_text">
                             <h2>Phone</h2>
                             <h3>+91 8089812666</h3>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
                         <div class="contact_items_social_icons">
                             <img src="img/facebookIcon.png" alt="">
                             <img src="img/instagramIcon.webp" alt="">
@@ -102,15 +103,23 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>
             <div class="footer_tags ">
                 <div class="footer_tags_centered row">
                     <div class="footer_tags_text_container col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6">
                         <!--<p class="default_bold default_underline">Navigation</p>-->
-                        <p>Home</p>
-                        <p>About Us</p>
-                        <p>Our Packages</p>
-                        <p>Contact</p>
+                        <a href="index.html">
+                            <p>Home</p>
+                        </a>
+                        <a href="about.html">
+                            <p>About Us</p>
+                        </a>
+                        <a href="packages.html">
+                            <p>Our Packages</p>
+                        </a>
+                        <a href="contact.html">
+                            <p>Contact</p>
+                        </a>
                     </div>
                     <div class="footer_tags_text_container col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6">
                         <p class="default_bold default_underline">Links</p>
@@ -137,6 +146,7 @@
             </div>
             <div class="footer_copyright_container">
                 Copyright 2024 takeoff | All Right Reserved
+                <p>Developed by : <a style="color: #fff;" href="https://illforddigital.com/">illforddigital</a></p>
             </div>
         </div>
     </div>
@@ -228,6 +238,7 @@
 
         }
 
+
         @media screen and (max-width:768px) {
             .contact_items_social_icons {
                 display: flex;
@@ -305,6 +316,11 @@
             font-family: "Roboto", sans-serif;
             padding: 2%;
             color: #ffffff;
+        }
+
+        .footer_tags a {
+            text-decoration: none;
+            color: #fff;
         }
 
 
@@ -459,7 +475,7 @@
 
         @media (max-width: 768px) {
             .offers-div {
-                 width: 80%;
+                width: 80%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -504,6 +520,7 @@
 
         /* /footer end/ */
     </style>
+    <script src="js/fade-animate.js"></script>
 </body>
 
 </html>

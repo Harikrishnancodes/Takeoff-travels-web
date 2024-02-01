@@ -32,9 +32,8 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
                 <button class="nav-button"><span class="nav-button-content">
-                    
-                    Call Us Now <i class="fa-solid fa-phone-volume"
-                        style="margin-left: 5px;"></i></span></button>
+
+                        Call Us Now <i class="fa-solid fa-phone-volume"></i></span></button>
             </div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div class="bar"></div>
@@ -53,41 +52,33 @@
         /* navbar */
         .nav {
             width: 100%;
-            height: 100px;
-            max-width: 100%;
+            height: auto;
+            /* Change from fixed height to auto for responsiveness */
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
             background-color: white;
             z-index: 1;
-            height: auto;
         }
-
-       
-        .nav-content img {
-    max-width: 100%; /* Make the image responsive */
-    height: 100px; /* Maintain aspect ratio */
-    margin-left: 30px;
-}
 
         .nav-content {
             width: 100%;
-            position: absolute;
+            position: relative;
+            /* Change to relative for logo alignment */
             display: flex;
             justify-content: space-between;
-            /* Align items on the ends */
             align-items: center;
-            z-index: 1;
-            padding: 10px;
+
+        }
+
+        .nav-content img {
+            max-height: 80px;
+            /* Adjust max-height for responsiveness */
         }
 
         .nav-links {
-
-            padding: 0px;
             display: flex;
             align-items: center;
-            /* Align items vertically in the center */
         }
 
         .nav-links ul {
@@ -96,13 +87,11 @@
             padding: 0;
             text-decoration: none;
             list-style: none;
-
         }
 
         .nav-links li {
-            margin-right: 25px;
-            padding-left: 25px;
-
+            margin-right: 15px;
+            padding-left: 15px;
         }
 
         .nav-links a {
@@ -113,8 +102,6 @@
             font-size: 1.4rem;
             font-family: "Roboto", sans-serif;
             font-weight: 500;
-            font-style: normal;
-            padding-top: 10px;
         }
 
         .nav-links a:hover {
@@ -125,7 +112,8 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
-            margin-right: 20px;
+            margin-right: 10px;
+            /* Adjust margin for better spacing */
         }
 
         .bar {
@@ -139,39 +127,39 @@
         .nav-button {
             position: relative;
             overflow: hidden;
-            padding: .5rem 1rem;
+            padding: .5rem;
             border-radius: 1.5rem;
             background: rgb(19, 149, 149);
             color: #fff;
             border: none;
             cursor: pointer;
-            font-size: 1.3rem;
-            margin-top: 0;
+
         }
-        
-.nav-button:hover::before {
-  transform: scaleX(1);
-}
 
-.nav-button-content {
-  position: relative;
-  z-index: 1;
-  font-size: 1rem;
-}
 
-.nav-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  width: 100%;
-  height: inherit;
-  border-radius: inherit;
-  background: black;
-  transition: all 0.475s;
-}
+        .nav-button:hover::before {
+            transform: scaleX(1);
+        }
+
+        .nav-button-content {
+            position: relative;
+            z-index: 1;
+            font-size: 1rem;
+        }
+
+        .nav-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: 0 50%;
+            width: 100%;
+            height: inherit;
+            border-radius: inherit;
+            background: black;
+            transition: all 0.475s;
+        }
 
 
 
@@ -180,25 +168,22 @@
                 font-size: 1.2rem;
                 /* Adjust the font size within this range */
             }
-            .nav-button {
-            position: relative;
-            overflow: hidden;
-            padding: 5px;
-            border-radius: 1.5rem;
-            background: rgb(19, 149, 149);
-           
-            font-size: 1.2rem;
-         
-        }
-        .nav-links li {
-            margin-right: 15px;
-            padding-left: 15px;
 
-        }
+            .nav-links li {
+                margin-right: 15px;
+                padding-left: 15px;
+
+            }
 
         }
 
         @media screen and (max-width: 1025px) {
+            .nav {
+                width: 100%;
+                height: 80px;
+
+            }
+
             .nav-links ul {
                 display: none;
                 flex-direction: column;
@@ -206,7 +191,7 @@
                 width: 100%;
                 background-color: rgba(235, 235, 235, 0.952);
                 position: absolute;
-                top: 100px;
+                top: 80px;
                 left: 0;
                 margin: 0;
                 z-index: 99999;
@@ -215,11 +200,11 @@
             .nav-links.show ul {
                 display: flex;
             }
+
             .nav-content img {
-    max-width: 100%; /* Make the image responsive */
-    height: 100px; /* Maintain aspect ratio */
-    margin-left: 0;
-}
+                max-width: 100%;
+                margin-left: 0;
+            }
 
             .nav-links li {
                 text-align: center;
