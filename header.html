@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -31,9 +32,15 @@
                     <li><a href="contact.html">Blog</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
-                <button class="nav-button"><span class="nav-button-content">
-
-                        Call Us Now <i class="fa-solid fa-phone-volume"></i></span></button>
+                <a href="tel:+918089812666" style="text-decoration: none; ">
+                <button class="nav-button">
+                    <span class="nav-button-content">
+                      
+                            Call Us Now <i class="fa-solid fa-phone-volume"></i>
+                        
+                    </span>
+                </button>
+                </a>
             </div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div class="bar"></div>
@@ -127,7 +134,7 @@
         .nav-button {
             position: relative;
             overflow: hidden;
-            padding: .5rem;
+            padding: .5rem 1rem;
             border-radius: 1.5rem;
             background: rgb(19, 149, 149);
             color: #fff;

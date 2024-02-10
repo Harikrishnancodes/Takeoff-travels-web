@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gallery</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6c53136549.js" crossorigin="anonymous"></script>
     <style>
         /* Optional: Add your custom styles here */
         .gallery-item {
@@ -94,30 +96,47 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            background: white;
         }
 
-        .gallery_heading_textholder{
+        .gallery_heading_textholder {
             width: 80%;
             height: auto;
         }
-        
-        .gallery_heading_textholder h5{
+
+        .gallery_heading_textholder h5 {
             font-weight: bold;
             font-size: 3rem;
         }
-        
-        .gallery_heading_textholder h6{
-            font-weight:normal;
+
+        .gallery_heading_textholder h6 {
+            font-weight: normal;
             font-size: 1.2rem;
         }
+        .gallery_sec1 {
+            background-image: url(../img/takeOffAboutHero.webp);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  margin-top: 80px;
 
+}
+
+/* #galley-container{
+    margin-top: 500vh;
+} */
     </style>
 </head>
 
 <body>
+
     <div id="header-container">
         <!-- The header content will be inserted here -->
     </div>
+    <!-- hero start-->
+     
+    <!-- hero end-->
 
     <div class="gallery_heading">
         <div class="gallery_heading_textholder">
@@ -129,7 +148,7 @@
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container mt-5" id="galley-container">
         <div class="row">
             <!-- Gallery items will be dynamically added here -->
         </div>
@@ -139,10 +158,22 @@
 
 
 
+    <div class="floating_btn">
+        <a target="_blank" href="https://wa.me/+918089812666" style="text-decoration: none;">
+            <div class="contact_icon">
+                <i class="fa fa-whatsapp my-float"></i>
+            </div>
+        </a>
+        <p class="text_icon">Talk to us?</p>
+          
+    </div>
+    </div>
 
 
 
-
+    <div id="book-me">
+        <button class="custom-package-btn" onclick="openForm()"> Custom Package </button>
+      </div>
 
 
 
@@ -180,6 +211,12 @@
             navLinks.classList.toggle("show");
         }
     </script>
+
+
+
+
+
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const homeSections = document.querySelectorAll('.home-section');
@@ -209,6 +246,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/fade-animate.js"></script>
+    <button class="scroll-to-top" id="scroll-to-top" onclick="scrollToTop()">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+      
 </body>
 
 </html>

@@ -25,7 +25,7 @@
     <!-- offers and packages section starts -->
     <div class="offers-main-div">
         <div class="offers-div">
-            <div class="offer-content animate fadeLeft">
+            <div class="offer-content ">
                 <h6>Grab Amazing Offers and <br>
                     <span class="takeoff">Exclusive Packages</span>
                 </h6>
@@ -40,7 +40,7 @@
                     </button> </a>
 
             </div>
-            <div class="offers-img animate fadeRight">
+            <div class="offers-img ">
                 <img src="img/footerpic.webp" alt="">
             </div>
         </div>
@@ -50,22 +50,36 @@
 
 
     <div class="gradient_div_blue_white">
-
-        <div class="gradient_div_blue_white_img_holder animate fadeInUp">
-            <img src="img/gradient float image 1.webp" alt="">
+        <div class="marquee-container">
+            <div class="marquee-wrapper">
+                <div class="gradient_div_blue_white_img_holder">
+                    <a href="packages.html"><img class="hover_image_1" src="img/gradient float image 1.webp" alt=""></a>
+                </div>
+                <div class="gradient_div_blue_white_img_holder">
+                    <a href="packages.html"><img class="hover_image_2" src="img/gradient float image 2.png" alt=""></a>
+                </div>
+                <div class="gradient_div_blue_white_img_holder">
+                    <a href="packages.html"><img class="hover_image_3" src="img/gradient float image 3.webp" alt=""></a>
+                </div>
+                <div class="gradient_div_blue_white_img_holder">
+                    <a href="packages.html"><img class="hover_image_4" src="img/gradient float image 4.webp" alt=""></a>
+                </div>
+                <div class="gradient_div_blue_white_img_holder">
+                    <a href="packages.html"><img class="hover_image_4" src="img/footer_hover1.webp" alt=""></a>
+                </div>
+                <div class="gradient_div_blue_white_img_holder">
+                    <a href="packages.html"><img class="hover_image_4" src="img/footer_hover2.webp" alt=""></a>
+                </div>
+                <div class="gradient_div_blue_white_img_holder">
+                    <a href="packages.html"><img class="hover_image_4" src="img/footer_hover3.webp" alt=""></a>
+                </div>
+                <div class="gradient_div_blue_white_img_holder">
+                    <a href="packages.html"><img class="hover_image_4" src="img/footer_hover4.webp" alt=""></a>
+                </div>
+            </div>
         </div>
-        <div class="gradient_div_blue_white_img_holder animate fadeInDown">
-            <img src="img/gradient float image 2.png" alt="">
-        </div>
-        <div class="gradient_div_blue_white_img_holder animate fadeInUp">
-            <img src="img/gradient float image 3.webp" alt="">
-        </div>
-        <div class="gradient_div_blue_white_img_holder animate fadeInDown">
-            <img src="img/gradient float image 4.webp" alt="">
-        </div>
-
     </div>
-
+    
 
     <div class="footer_contaier">
         <div class="footer_contaier_centered">
@@ -78,14 +92,14 @@
                         <img src="img/locationIcon.png" alt="">
                         <div class="contact_items_text">
                             <h2>Location</h2>
-                            <h3>Address here</h3>
+                            <p>Takeoff Travel Agency,    Pavangad,Calicut, Kerala, 673021 </p>
                         </div>
                     </div>
                     <div class="contact_items col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
                         <img src="img/emailIcon.webp" alt="">
                         <div class="contact_items_text">
                             <h2>Email</h2>
-                            <h3>support@gamil.com</h3>
+                            <h3>contact@takeoff.com </h3>
                         </div>
                     </div>
                     <div class="contact_items col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
@@ -103,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>
             <div class="footer_tags ">
                 <div class="footer_tags_centered row">
                     <div class="footer_tags_text_container col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -116,6 +130,9 @@
                         </a>
                         <a href="packages.html">
                             <p>Our Packages</p>
+                        </a>
+                        <a href="gallery.html">
+                            <p>Gallery</p>
                         </a>
                         <a href="contact.html">
                             <p>Contact</p>
@@ -146,12 +163,47 @@
             </div>
             <div class="footer_copyright_container">
                 Copyright 2024 takeoff | All Right Reserved
-                <p>Developed by : <a style="color: #fff;" href="https://illforddigital.com/">illforddigital</a></p>
+                <p>Developed by : <a style="color: #fff;" href="https://illforddigital.com/"
+                        target="_blank">IllfordDigital</a></p>
             </div>
         </div>
     </div>
 
+  <!-- popup form -->
 
+  <div id="customPackageOverlay">
+    <div class="formPopup">
+        <span class="cancel-btn" onclick="closeForm()">&#10006;</span>
+        <form action="custom-package.php" class="formContainer" method="post" enctype="multipart/form-data">
+            <h2>CUSTOM <span class="takeoff">PACKAGE</span></h2>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <div class="input-group2">
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="tel" id="mobile" name="mobile" placeholder="Your Mobile" required>
+            </div>
+            <div class="input-group2">
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Your WhatsApp" required>
+                <input type="number" id="numMembers" name="numMembers" placeholder="Number of Members" required>
+            </div>
+            <div class="input-group2">
+                <input type="date" id="travelDate" name="travelDate" placeholder="Travel Date" required>
+                <input type="number" id="numDays" name="numDays" placeholder="Number of Days" required>
+            </div>
+            <div class="input-group2">
+                <input type="text" id="destination" name="destination" placeholder="Destination" required>
+                <input type="text" id="departureAirport" name="departureAirport" placeholder="Departure Airport" required>
+            </div>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+            <div class="form-button">
+                <button class="button" type="submit">
+                    <span class="button-content">Submit</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+  <!-- popup form -->
 
     <style>
         /* /footer start/ */
@@ -341,26 +393,53 @@
 
         }
 
-
-
         .gradient_div_blue_white {
-            width: 100%;
-            height: auto;
-            background: linear-gradient(to bottom, #fff 50%, #139595 50%);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            padding: 2%;
-        }
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom, #fff 50%, #139595 50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+   
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
 
-        .gradient_div_blue_white_img_holder {
-            width: 25%;
-        }
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+}
 
-        .gradient_div_blue_white_img_holder img {
-            width: 80%;
-        }
+.marquee-wrapper {
+    display: flex;
+    animation: marquee 20s linear infinite; /* Adjust duration as needed */
+}
+
+.gradient_div_blue_white_img_holder {
+    flex: 0 0 25%; /* Adjust width to display 4 images at a time */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.gradient_div_blue_white_img_holder img {
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
 
 
         .about_sec6 {
@@ -520,7 +599,7 @@
 
         /* /footer end/ */
     </style>
-    <script src="js/fade-animate.js"></script>
+
 </body>
 
 </html>
